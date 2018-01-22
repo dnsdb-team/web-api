@@ -1,34 +1,1 @@
-{
-  "name": "DnsDB API",
-  "version": "0.0.1",
-  "description": "DnsDB API Documentation",
-  "title": "API - DnsDB",
-  "url": "https://dnsdb.io/api/v1",
-  "sampleUrl": "https://dnsdb.io/api/v1",
-  "header": {
-    "title": "Summary",
-    "content": "<h2>概述</h2>\n<p><strong>DnsDB API</strong>是<a href=\"https://dnsdb.io\">DnsDB.io</a> 为开发者提供的API服务。目前该API主要提供DNS查询</p>\n<h2>使用条件</h2>\n<ol>\n<li>升级DnsDB账号为开发者账号</li>\n<li>购买相应的API套餐</li>\n</ol>\n<h2>套餐及价格</h2>\n<p>API不是免费的, 如有需求, 请联系DnsDB客服咨询<a target=\"_blank\" href=\"http://wpa.qq.com/msgrd?v=3&uin=2785770375&site=qq&menu=yes\"><img border=\"0\" src=\"https://dnsdb.io/static/img/qqchat.jpg\" alt=\"点击这里给我发消息\" title=\"点击这里给我发消息\"/></a></p>\n<h2>SDK下载</h2>\n<table>\n<thead>\n<tr>\n<th>语言</th>\n<th>项目地址</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Java</td>\n<td>开发中</td>\n</tr>\n<tr>\n<td>Python</td>\n<td><a href=\"https://pysdk.dnsdb.io\">查看</a></td>\n</tr>\n</tbody>\n</table>\n"
-  },
-  "footer": {
-    "title": "Errors",
-    "content": "<h2>Errors</h2>\n<table>\n<thead>\n<tr>\n<th>status</th>\n<th>error</th>\n<th>message</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>401</code></td>\n<td><code>authenticate_failed</code></td>\n<td>Username password does not match</td>\n</tr>\n<tr>\n<td><code>401</code></td>\n<td><code>account_disabled</code></td>\n<td>Account is disabled</td>\n</tr>\n<tr>\n<td><code>400</code></td>\n<td><code>not_developer</code></td>\n<td>Please apply to become a developer</td>\n</tr>\n<tr>\n<td><code>401</code></td>\n<td><code>unauthorized</code></td>\n<td>Access token has expired or not existed</td>\n</tr>\n<tr>\n<td><code>402</code></td>\n<td><code>credits_insufficient</code></td>\n<td>API number of times insufficient, please recharge</td>\n</tr>\n<tr>\n<td><code>400</code></td>\n<td><code>missing_query_error</code></td>\n<td>Missing query parameters, please select at least one parameter from &quot;host&quot;, &quot;domain&quot;, and &quot;ip&quot;</td>\n</tr>\n<tr>\n<td><code>400</code></td>\n<td><code>from_value_error</code></td>\n<td>[from] should be an integer(0~9970)</td>\n</tr>\n<tr>\n<td><code>400</code></td>\n<td><code>ip_value_error</code></td>\n<td>[ip] should be a valid IP address</td>\n</tr>\n<tr>\n<td><code>504</code></td>\n<td><code>gateway_timeout</code></td>\n<td>Please contact the dnsdb.io administrator to deal with the problem.</td>\n</tr>\n<tr>\n<td><code>500</code></td>\n<td><code>internal_server_error</code></td>\n<td>Please contact the dnsdb.io administrator to deal with the problem.</td>\n</tr>\n</tbody>\n</table>\n"
-  },
-  "order": [
-    "Authorize",
-    "SearchDNS",
-    "SearchAllDNS",
-    "RetrieveDNSResult",
-    "Search",
-    "Other"
-  ],
-  "template": {
-    "withGenerator": false
-  },
-  "apidoc": "0.2.0",
-  "generator": {
-    "name": "apidoc",
-    "time": "2016-09-18T03:53:02.195Z",
-    "url": "http://apidocjs.com",
-    "version": "0.16.1"
-  }
-}
+{  "name": "DnsDB API",  "version": "1.0.0",  "description": "DnsDB API Documentation",  "title": "API - DnsDB",  "url": "https://api.dnsdb.io/v1",  "sampleUrl": "https://api.dnsdb.io",  "header": {    "title": "Summary",    "content": "<h2>概述</h2>\n<p><strong>DnsDB API</strong>是<a href=\"https://dnsdb.io\">DnsDB.io</a> 为开发者提供的API服务。目前该API主要提供DNS查询</p>\n"  },  "footer": {    "title": "Errors",    "content": "<h2>Errors</h2>\n<table>\n<thead>\n<tr>\n<th>code</th>\n<th>message</th>\n<th>解释</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>10001</td>\n<td>unauthorized</td>\n<td>没有指定<code>API-ID</code>或者<code>API-KEY</code></td>\n</tr>\n<tr>\n<td>10002</td>\n<td>unauthorized ip</td>\n<td>未授权的客户端IP地址</td>\n</tr>\n<tr>\n<td>10003</td>\n<td>invalid api id</td>\n<td>不合法的<code>API-ID</code></td>\n</tr>\n<tr>\n<td>10004</td>\n<td>invalid api key</td>\n<td>不合法的<code>API-KEY</code></td>\n</tr>\n<tr>\n<td>10005</td>\n<td>authentication failed</td>\n<td>API请求认证失败，<code>API-ID</code>与<code>API-KEY</code>不匹配</td>\n</tr>\n<tr>\n<td>10006</td>\n<td>insufficient resources</td>\n<td>当前API服务中可用的API请求次数不足</td>\n</tr>\n<tr>\n<td>10007</td>\n<td>service expired</td>\n<td>当前API服务已经过期</td>\n</tr>\n<tr>\n<td>10101</td>\n<td>invalid json</td>\n<td>不合法的<code>JSON</code>数据</td>\n</tr>\n<tr>\n<td>10102</td>\n<td>invalid page</td>\n<td>不合法的<code>page</code>参数</td>\n</tr>\n<tr>\n<td>10103</td>\n<td>invalid size</td>\n<td>不合法的<code>size</code>参数</td>\n</tr>\n<tr>\n<td>10104</td>\n<td>invalid ip</td>\n<td>不合法的<code>ip</code>参数</td>\n</tr>\n<tr>\n<td>10105</td>\n<td>invalid domain</td>\n<td>不合法的<code>domain</code>参数</td>\n</tr>\n<tr>\n<td>10106</td>\n<td>invalid host</td>\n<td>不合法的<code>host</code>参数</td>\n</tr>\n<tr>\n<td>10107</td>\n<td>invalid value_ip</td>\n<td>不合法的<code>value_ip</code>参数</td>\n</tr>\n<tr>\n<td>10108</td>\n<td>invalid value_domain</td>\n<td>不合法的<code>value_domain</code>参数</td>\n</tr>\n<tr>\n<td>10109</td>\n<td>invalid value_host</td>\n<td>不合法的<code>value_host</code>参数</td>\n</tr>\n<tr>\n<td>10110</td>\n<td>invalid email</td>\n<td>不合法的<code>email</code>参数</td>\n</tr>\n<tr>\n<td>10111</td>\n<td>require scan_id</td>\n<td>缺少<code>scan_id</code>参数</td>\n</tr>\n<tr>\n<td>10112</td>\n<td>invalid scan_id</td>\n<td>不合法的<code>scan_id</code>参数</td>\n</tr>\n<tr>\n<td>10113</td>\n<td>too large ip range</td>\n<td><code>ip</code>参数或<code>domain_ip</code>参数指定的IP返回包含的IP数大于16777216个</td>\n</tr>\n<tr>\n<td>10114</td>\n<td>too large result window</td>\n<td><code>size</code> * <code>page</code>参数大于10000</td>\n</tr>\n<tr>\n<td>10115</td>\n<td>empty query</td>\n<td>空查询，没有指定任何查询条件</td>\n</tr>\n<tr>\n<td>10201</td>\n<td>request wrong url</td>\n<td>API请求路径错误</td>\n</tr>\n<tr>\n<td>50000</td>\n<td>server interval error</td>\n<td>服务器内部出错，该错误不是客户端引起的</td>\n</tr>\n<tr>\n<td>50002</td>\n<td>search timeout</td>\n<td>查询超时</td>\n</tr>\n</tbody>\n</table>\n"  },  "order": [    "Authorize",    "SearchDNS",    "SearchAllDNS",    "RetrieveDNSResult",    "Search",    "Other"  ],  "template": {    "withGenerator": false  },  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2017-12-20T02:20:12.765Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }}
